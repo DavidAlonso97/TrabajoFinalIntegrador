@@ -1,7 +1,6 @@
 import express, {Express} from 'express';
 import Router from './Router/Router'
 import "reflect-metadata";
-import {createConnectionDB} from './DataBase/Configuration'
 
 class App {
 

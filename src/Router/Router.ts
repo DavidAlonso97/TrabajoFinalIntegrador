@@ -1,6 +1,6 @@
 import express, {Request, Response, Express} from 'express';
 import bodyParser = require('body-parser');
-import {UserController} from '../Controllers/UserController';
+import {MainController} from '../Controllers/MainController'
 
 class Router {
 
@@ -16,11 +16,7 @@ class Router {
 
     private userRouts(){
         this.express.use(bodyParser());
-        this.express.get('/',function(req: Request,res: Response){
-            
-        })
-        this.express.post('/user', UserController.store);
-        this.express.get('/user/:id', UserController.show);
+        this.express.get('/', MainController.main);
     }
 
 
